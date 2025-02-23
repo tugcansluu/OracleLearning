@@ -12,4 +12,4 @@ telefon char(200)
 );
 
 /* tabloya veri ekleme */
-INSERT INTO veri_tipi(telefon) VALUES ('05074865868');
+INSERT INTO veri_tipi(telefon) VALUES ('05419999999');
