@@ -77,3 +77,42 @@ SELECT adi, mail Adresi FROM personel;
 SELECT mail Adresi "Mail" FROM personel;
 
 SELECT DISTINCT * FROM personel; /* benzersiz */
+
+
+/* order by */
+
+create table dersedevam (
+isim     varchar2(20),
+soyisim  varchar2(20),
+numara   number(3),
+yas      number(3)
+);
+
+INSERT INTO dersedevam VALUES ('Tugcan','Uslu',131,15);
+INSERT INTO dersedevam VALUES ('Alp','Unal',777,22);
+
+SELECT yas FROM dersedevam ORDER BY yas ; /* ARTAN */
+SELECT yas FROM dersedevam ORDER BY yas  ASC; /* ARTAN */
+SELECT yas FROM dersedevam ORDER BY yas  DESC;  /* AZALAN */
+
+SELECT isim FROM dersedevam ORDER BY isim ; /* alfabetik */
+SELECT isim FROM dersedevam ORDER BY isim ASC; /* alfabetik */
+SELECT isim FROM dersedevam ORDER BY isim DESC; /* tersten alfabetik */
+
+SELECT numara , isim FROM dersedevam ORDER BY numara ASC , isim DESC;
+SELECT numara , isim FROM dersedevam ORDER BY numara ASC , isim ASC;
+
+SELECT numara , yas FROM dersedevam ORDER BY 2 ; /* yasa gore siralama */
+
+/* aritmetik islemler */
+
+create table isci(
+isim varchar2(25),
+soyisim varchar2(25),
+maas number(4)
+);
+
+INSERT INTO isci VALUES ('Tugcan','Uslu',5000);
+SELECT maas+250 as "yeni maas" from isci;
+select maas+maas*5+5*9/3 "yeni maas" from isci where maas=5000;
+select maas from isci;
