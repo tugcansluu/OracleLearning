@@ -116,3 +116,14 @@ INSERT INTO isci VALUES ('Tugcan','Uslu',5000);
 SELECT maas+250 as "yeni maas" from isci;
 select maas+maas*5+5*9/3 "yeni maas" from isci where maas=5000;
 select maas from isci;
+
+/* WHERE */
+
+CREATE TABLE iliskisel(
+  isim varchar2(25),
+  maaş number(4)
+  );
+
+INSERT TO iliskisel VALUES ('Tugcan',1000);
+
+SELECT * FROM iliskisel WHERE maas = 1000 adn isim='Tuğcan';
