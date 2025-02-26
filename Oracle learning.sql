@@ -126,4 +126,4 @@ CREATE TABLE iliskisel(
 
 INSERT TO iliskisel VALUES ('Tugcan',1000);
 
-SELECT * FROM iliskisel WHERE maas = 1000 adn isim='Tuğcan';
+SELECT * FROM iliskisel WHERE maas = 1000 adn isim='Tugcan';
